@@ -19,6 +19,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
+// login start screen
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     private GoogleApiClient googleApiClient;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else SignOut.setVisibility(View.GONE);
     }
 
+    // sign in/sign out
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.signInButton) {
@@ -60,12 +62,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    // signIn with api client
     private void signIn() {
         Intent i = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
         startActivityForResult(i, REQ_CODE);
 
     }
 
+    //sign out
     private void signOut() {
         Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
             @Override
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
     }
-
+    //check if sign in is successful
     private void handleResult(GoogleSignInResult result) {
         if (result.isSuccess()) {
             GoogleSignInAccount account = result.getSignInAccount();
@@ -90,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    // determine whether user already exists and goto appropriate activity
     private void choosePref(boolean isLogin) {
         TextView tv = (TextView)findViewById(R.id.account_name);
         if (isLogin) {

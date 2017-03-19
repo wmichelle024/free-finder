@@ -26,13 +26,14 @@ public class PreferencesActivity extends AppCompatActivity {
         String email = getIntent().getStringExtra("Email");
 
         TextView tv = (TextView) findViewById(R.id.username_txt);
-
+        // create new user
         tv.setText(name);
         user = new User(email);
         user.setEmail(email);
         user.setName(name);
     }
 
+    // choose preferences
     public void onButtonClick(View v) {
         List<Attraction.Type> c = new LinkedList<Attraction.Type>();
         int check[] = {R.id.cbArt, R.id.cbBusiness, R.id.cbFood, R.id.cbTech, R.id.cbSports, R.id.cbGame, R.id.cbSocial, R.id.cbOther, R.id.cbHealth};
@@ -75,6 +76,7 @@ public class PreferencesActivity extends AppCompatActivity {
             for (Attraction.Type i: c) {
                 user.addCategory(i);
             }
+            //add user to singleton
             UserManager.getOurInstance().addUser(user);
             Gson gson = new Gson();
             String info = gson.toJson(user);

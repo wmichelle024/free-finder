@@ -17,7 +17,7 @@ public class User {
 
     public User(String id) {
         name = "";
-        email = id;
+        email = id; // unique identifier (Google Account)
         preferences = new ArrayList<Attraction.Type>();
     }
 

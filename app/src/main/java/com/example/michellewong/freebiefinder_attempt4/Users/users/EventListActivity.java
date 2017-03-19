@@ -17,7 +17,10 @@ public class EventListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_list);
 
         String e = getIntent().getStringExtra("Email");
+        //find user with email
         User user = UserManager.getOurInstance().getUser(e);
+
+        //print categories
         List<Attraction.Type> pref = user.getCategories();
         String str = "";
         for (Attraction.Type p : pref) {
