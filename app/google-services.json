@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "555015930408",
+    "project_id": "freebiefinder3"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555015930408:android:cfc4a82cf0144bf4",
+        "android_client_info": {
+          "package_name": "com.example.michellewong.freebiefinder_attempt4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555015930408-puh6lg4oco6r4p1gcsgria103ahdk4oc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.michellewong.freebiefinder_attempt4",
+            "certificate_hash": "1a35ecbe087b30572ba5a660cab44c7c32fb32a1"
+          }
+        },
+        {
+          "client_id": "555015930408-n4n65e3rsf1astgtcp7qgb6d65edhii2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCup_81rzalXHc3Hv04dega_yqrnr3tUEM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
