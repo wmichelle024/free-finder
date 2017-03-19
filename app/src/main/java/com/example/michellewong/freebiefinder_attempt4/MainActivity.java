@@ -95,10 +95,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tv.setText(Name);
             SignIn.setVisibility(View.GONE);
             SignOut.setVisibility(View.VISIBLE);
-            Intent i = new Intent(MainActivity.this, PreferencesActivity.class);
-            i.putExtra("Name", Name);
-            i.putExtra("Email", Email);
-            startActivity(i);
+            if (UserManager.getOurInstance().doesContain(Email)) {
+                Intent i = new Intent(MainActivity.this, EventListActivity.class);
+                i.putExtra("Email", Email);
+                startActivity(i);
+            }
+            else {
+                Intent i = new Intent(MainActivity.this, PreferencesActivity.class);
+                i.putExtra("Name", Name);
+                i.putExtra("Email", Email);
+                startActivity(i);
+            }
         }
         else {
             SignIn.setVisibility(View.VISIBLE);

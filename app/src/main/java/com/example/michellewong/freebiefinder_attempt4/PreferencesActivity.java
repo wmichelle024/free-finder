@@ -73,10 +73,10 @@ public class PreferencesActivity extends AppCompatActivity {
             for (Attraction.Type i: c) {
                 user.addCategory(i);
             }
+            UserManager.getOurInstance().addUser(user);
             Gson gson = new Gson();
-            String b = gson.toJson(user);
+            String info = gson.toJson(user);
 
-            String info = user.toString();
             Intent a = new Intent(PreferencesActivity.this,UserInfoActivity.class);
             a.putExtra("Info", info);
             startActivity(a);

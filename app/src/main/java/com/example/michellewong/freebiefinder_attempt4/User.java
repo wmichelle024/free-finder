@@ -46,5 +46,18 @@ public class User {
     public String toString() {
         return "User [id=" + email + ", Name=" + name + ", preferences=" + preferences + "]";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o==null || o.getClass() != this.getClass()) return false;
+        User a = (User) o;
+        return this.email.equals(a.email);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return email.hashCode();
+    }
 }
 
