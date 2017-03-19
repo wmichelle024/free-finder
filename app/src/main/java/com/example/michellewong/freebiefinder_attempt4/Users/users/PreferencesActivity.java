@@ -1,4 +1,4 @@
-package com.example.michellewong.freebiefinder_attempt4;
+package com.example.michellewong.freebiefinder_attempt4.Users.users;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.example.michellewong.freebiefinder_attempt4.R;
+import com.example.michellewong.freebiefinder_attempt4.Users.Attraction;
 import com.google.gson.Gson;
 
 import java.util.LinkedList;

@@ -1,8 +1,11 @@
-package com.example.michellewong.freebiefinder_attempt4;
+package com.example.michellewong.freebiefinder_attempt4.Users.users;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.michellewong.freebiefinder_attempt4.R;
+import com.example.michellewong.freebiefinder_attempt4.Users.Attraction;
 
 import java.util.List;
 

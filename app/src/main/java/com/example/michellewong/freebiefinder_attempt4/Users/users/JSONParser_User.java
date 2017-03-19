@@ -1,11 +1,10 @@
-package com.example.michellewong.freebiefinder_attempt4;
+package com.example.michellewong.freebiefinder_attempt4.Users.users;
+
+import com.example.michellewong.freebiefinder_attempt4.Users.Attraction;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by michellewong on 2017-03-19.
@@ -29,7 +28,7 @@ public class JSONParser_User {
         User user = new User(id);
         user.setName(name);
         for (String i : type) {
-            if (i.equals("ART")) {
+            if (i.equals("ARTS")) {
                 user.addCategory(Attraction.Type.ARTS);
             } else if (i.equals("BUSINESS")) {
                 user.addCategory(Attraction.Type.BUSINESS);

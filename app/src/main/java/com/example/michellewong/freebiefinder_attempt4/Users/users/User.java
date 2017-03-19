@@ -1,4 +1,6 @@
-package com.example.michellewong.freebiefinder_attempt4;
+package com.example.michellewong.freebiefinder_attempt4.Users.users;
+
+import com.example.michellewong.freebiefinder_attempt4.Users.Attraction;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.michellewong.freebiefinder_attempt4;
+package com.example.michellewong.freebiefinder_attempt4.Users;
 
 /**
  * Created by michellewong on 2017-03-19.
